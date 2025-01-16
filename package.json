@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "GSS wrapper layer to serve content from all microservices through GraphQL and REST API",
   "main": "index.ts",
+  "engines": {
+  "node": ">=16.x"
+},
   "scripts": {
     "build": "swc src -d dist",
     "build-dev": "npm run build && NODE_ENV=developement node --inspect --experimental-specifier-resolution=node dist/index.js",

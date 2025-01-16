@@ -2,15 +2,21 @@
     "version": 2,
     "builds": [
       {
-        "src": "index.ts",
+        "src": "api/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "index.ts"
+        "src": "/graphql",
+        "dest": "/api/graphql"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/api/index.js"
       }
-    ]
+    ],
+    "env": {
+      "mercury": "mongodb+srv://shashanksonwane305:1IrdhnVfQFmGEenv@cluster0.o9dunyc.mongodb.net/Bharath"
+    }
   }
-  
