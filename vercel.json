@@ -2,14 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/index.js",
-      "use": "@vercel/node"
+      "src": "src/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "src/**/*",
+          ".env"
+        ]
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/index.js"
+      "dest": "src/index.ts"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
