@@ -4,7 +4,7 @@
   "description": "GSS wrapper layer to serve content from all microservices through GraphQL and REST API",
   "main": "index.ts",
   "engines": {
-  "node": ">=16.x"
+  "node": "18.x"
 },
   "scripts": {
     "build": "swc src -d dist",
