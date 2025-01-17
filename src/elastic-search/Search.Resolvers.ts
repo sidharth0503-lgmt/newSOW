@@ -1,7 +1,7 @@
 
 import mercury from "@mercury-js/core";
 import { GraphQLError } from "graphql";5
-import cron from "node-cron";
+// import cron from "node-cron";
 import nodemailer from "nodemailer";
 import moment from "moment";
 import jwt from "jsonwebtoken";
@@ -82,14 +82,14 @@ async function sendSOWStartAlerts() {
 }
 
 
-cron.schedule('*/5 * * * *', async () => {
-  try {
-    console.log('Starting scheduled SOW start alert check...');
-    await sendSOWStartAlerts();
-  } catch (error) {
-    console.error('Error in scheduled cron task:', error);
-  }
-});
+// cron.schedule('*/5 * * * *', async () => {
+//   try {
+//     console.log('Starting scheduled SOW start alert check...');
+//     await sendSOWStartAlerts();
+//   } catch (error) {
+//     console.error('Error in scheduled cron task:', error);
+//   }
+// });
 
 export default {
   Query: {
