@@ -12,8 +12,8 @@ import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHt
 import * as dotenv from "dotenv";
 
 dotenv.config();
-import './models';
-import "./profiles";
+import './models/index';
+import "./profiles/index";
 
 import { typeDefs } from './elastic-search/schema';
 import resolvers from "./elastic-search/Search.Resolvers";
