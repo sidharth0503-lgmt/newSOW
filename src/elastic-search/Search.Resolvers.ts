@@ -71,7 +71,7 @@ async function sendSOWStartAlerts() {
       to: emailArray,
       subject: 'Alert: New Resources Created in the Last 5 Minutes',
       text: `These is like an alert message:\n\n` +
-            recentResources.map(resource => `- ${resource.employeeName} (Resource ID: ${resource.resourceId})`).join('\n'),
+        recentResources.map((resource: { employeeName: any; resourceId: any; }) => `- ${resource.employeeName} (Resource ID: ${resource.resourceId})`).join('\n'),
     };
 
     await transporter.sendMail(emailContent);
